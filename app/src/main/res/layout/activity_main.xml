@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ 	activity_main.xml
+  ~ 	app
+  ~
+  ~  	The MIT License (MIT)
+  ~
+  ~  	Copyright (c) 2017, Gleb Nikitenko
+  ~
+  ~ 	Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~  	of this software and associated documentation files (the "Software"), to deal
+  ~  	in the Software without restriction, including without limitation the rights
+  ~  	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~  	copies of the Software, and to permit persons to whom the Software is
+  ~  	furnished to do so, subject to the following conditions:
+  ~
+  ~ 	The above copyright notice and this permission notice shall be included in all
+  ~ 	copies or substantial portions of the Software.
+  ~
+  ~  	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~  	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~  	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~  	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~  	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~  	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~  	SOFTWARE.
+  ~
+  -->
+
+<FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        tools:context=".main.MainActivity">
+
+    <GridLayout
+            android:id="@+id/grid_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:columnCount="4"
+            android:rowCount="2"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/a_editText"
+                android:layout_width="56dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="numberSigned"
+                android:ems="10"/>
+        <TextView
+                android:layout_marginStart="4dp"
+                android:text="@string/a"
+                android:labelFor="@id/a_editText"/>
+
+        <EditText
+                android:id="@+id/b_editText"
+                android:layout_width="56dp"
+                android:layout_marginEnd="4dp"
+                android:inputType="numberSigned"
+                android:ems="10"/>
+        <TextView
+                android:layout_marginStart="4dp"
+                android:text="@string/b"
+                android:labelFor="@id/b_editText"/>
+
+        <Button
+                android:id="@+id/button"
+                android:text="@string/calculate_sum"
+                android:layout_gravity="fill_horizontal"
+                android:layout_columnSpan="4"/>
+
+    </GridLayout>
+
+    <ProgressBar
+            style="?android:attr/progressBarStyle"
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" tools:visibility="invisible"/>
+
+
+</FrameLayout>
+

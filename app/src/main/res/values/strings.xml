@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="calculate_sum">Calculate sum</string>
+    <string name="a">A:</string>
+    <string name="b">B:</string>
+</resources>
